@@ -42,7 +42,7 @@ Lock order: **UFDT(fd) → inode** (to avoid deadlocks).
 
 Open PowerShell in this folder:
 
-`C:\Users\ingle\OneDrive\Desktop\cvfs`
+`directory_path`
 
 Compile:
 
@@ -329,7 +329,7 @@ Marvellous VFS : > exit
 ### Capture interactive CLI + perf (prints while saving)
 
 ```powershell
-cd "C:\Users\ingle\OneDrive\Desktop\cvfs"
+cd "directory_path"
 $env:CVFS_PERF="1"
 .\cvfs.exe 2>&1 | Tee-Object -FilePath .\run1.log
 ```
@@ -337,7 +337,7 @@ $env:CVFS_PERF="1"
 ### Capture a script run + perf (fully non-interactive)
 
 ```powershell
-cd "C:\Users\ingle\OneDrive\Desktop\cvfs"
+cd "directory_path"
 $env:CVFS_PERF="1"
 .\cvfs.exe --script perf_input.txt 2>&1 | Tee-Object -FilePath .\script_run.log
 ```
